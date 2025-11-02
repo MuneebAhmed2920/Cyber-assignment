@@ -128,7 +128,7 @@ Cyber Assignment/
 
 ## Testing
 
-The application includes 20+ manual test cases for cybersecurity testing. Refer to the test case documentation for detailed test scenarios.
+The application includes 20 manual test cases for cybersecurity testing. Refer to the test case documentation for detailed test scenarios.
 
 ## Database Schema
 
@@ -136,21 +136,3 @@ The application includes 20+ manual test cases for cybersecurity testing. Refer 
 - **transactions**: Stores encrypted transaction data
 - **audit_logs**: Activity logs with timestamps and IP addresses
 - **user_profiles**: Encrypted profile information
-
-## Technologies Used
-
-- Python 3.x
-- Flask (Web Framework)
-- SQLite (Database)
-- Cryptography (Fernet encryption)
-- Werkzeug (Password hashing)
-- Bootstrap 5 (UI Framework)
-
-## Developer
-
-Created for CY4053 - Cybersecurity for FinTech Assignment 2
-
-## License
-
-Educational use only
-
