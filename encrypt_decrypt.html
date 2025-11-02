@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Encrypt/Decrypt - Secure FinTech App{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="section-box">
+            <h3 class="text-center mb-4" style="color: #64ffda;">🔐 Encryption / Decryption Utility</h3>
+                <form method="POST" action="{{ url_for('encrypt_decrypt') }}">
+                    <div class="mb-3">
+                        <label for="action" class="form-label">Action</label>
+                        <select class="form-select" id="action" name="action" required>
+                            <option value="">Select action</option>
+                            <option value="encrypt">Encrypt</option>
+                            <option value="decrypt">Decrypt</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="data" class="form-label">Data</label>
+                        <textarea class="form-control" id="data" name="data" required 
+                                  placeholder="Enter data to encrypt or decrypt" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">⚙️ Process</button>
+                </form>
+                {% if result %}
+                <hr>
+                <div class="mt-4">
+                    <div class="card" style="background: rgba(100, 255, 218, 0.1) !important;">
+                        <div class="card-body">
+                            <h5 class="card-title">Result ({{ action|title }})</h5>
+                            <p class="card-text"><code>{{ result }}</code></p>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+    </div>
+</div>
+{% endblock %}
+

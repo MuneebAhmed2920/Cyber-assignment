@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Error - Secure FinTech App{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="section-box text-center">
+            <h1 class="display-1" style="color: #64ffda; font-size: 8rem;">{{ error_code }}</h1>
+            <h3 style="color: #b0bec5;">{{ message }}</h3>
+            <p class="mt-4">
+                <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg">🏠 Return to Home</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

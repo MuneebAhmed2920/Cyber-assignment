@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Audit Logs - Secure FinTech App{% endblock %}
+
+{% block content %}
+<div class="section-box mb-4">
+    <h2 class="main-title mb-4">📝 Audit Logs</h2>
+    <p class="sub-title">Activity tracking and security monitoring</p>
+</div>
+<div class="card">
+    <div class="card-header">
+        <h5>🔍 Activity Log</h5>
+    </div>
+    <div class="card-body">
+        {% if logs %}
+        <div class="table-responsive">
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Action</th>
+                        <th>IP Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for log in logs %}
+                    <tr>
+                        <td>{{ log[2] }}</td>
+                        <td>{{ log[0] }}</td>
+                        <td>{{ log[1] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="text-muted">No audit logs found.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Register - Secure FinTech App{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="section-box">
+            <h3 class="text-center mb-4" style="color: #64ffda;">📝 User Registration</h3>
+            <form method="POST" action="{{ url_for('register') }}">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" required 
+                           placeholder="Choose a username" maxlength="50">
+                    <small class="form-text text-muted">Username must be unique</small>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required 
+                           placeholder="Enter your email address">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required 
+                           placeholder="Create a strong password">
+                    <small class="form-text text-muted">
+                        Must be at least 8 characters with uppercase, lowercase, digit, and special character
+                    </small>
+                </div>
+                <div class="mb-3">
+                    <label for="confirm_password" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirm_password" name="confirm_password" required 
+                           placeholder="Confirm your password">
+                </div>
+                <button type="submit" class="btn btn-primary w-100">✅ Create Account</button>
+            </form>
+            <hr>
+            <div class="text-center">
+                <p class="text-muted">Already have an account? <a href="{{ url_for('login') }}" style="color: #64ffda;">Login here</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

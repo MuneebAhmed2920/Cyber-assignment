@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Secure FinTech App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-10 mx-auto">
+        <h1 class="main-title">Welcome to Secure FinTech</h1>
+        <p class="sub-title">A FinTech Application with Built-in Cybersecurity Features</p>
+        <hr>
+        
+        <div class="section-box">
+            <div class="text-center mb-4">
+                <h3>💎 Secure Banking Platform</h3>
+                <p class="lead">Built with Flask + Python</p>
+            </div>
+            <div class="row">
+                <div class="col-md-12 mb-3">
+                    <p><strong>Key Features:</strong></p>
+                    <ul>
+                        <li>Uses <strong>PBKDF2-SHA256</strong> for password hashing</li>
+                        <li>Uses <strong>AES (Fernet)</strong> for data encryption</li>
+                        <li>Protects against SQL Injection & XSS attacks</li>
+                        <li>Tracks activity in <strong>Audit Logs</strong></li>
+                        <li>Session management with auto-expiry</li>
+                        <li>Secure file upload validation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a class="btn btn-primary btn-lg me-3" href="{{ url_for('register') }}" role="button">📝 Register</a>
+                <a class="btn btn-outline-primary btn-lg" href="{{ url_for('login') }}" role="button">🔐 Login</a>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">🔐 Secure Authentication</h5>
+                        <p class="card-text">Password hashing with PBKDF2-SHA256 and strong password validation rules.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">🔒 Data Encryption</h5>
+                        <p class="card-text">Sensitive data encrypted using Fernet symmetric encryption algorithm.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">📊 Audit Logging</h5>
+                        <p class="card-text">Comprehensive activity logging with IP tracking for security monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

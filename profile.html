@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Profile - Secure FinTech App{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="section-box">
+            <h3 class="text-center mb-4" style="color: #64ffda;">👤 User Profile</h3>
+                <form method="POST" action="{{ url_for('profile') }}">
+                    <div class="mb-3">
+                        <label for="full_name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="full_name" name="full_name" 
+                               value="{{ profile.full_name if profile.full_name else '' }}" 
+                               placeholder="Enter full name" maxlength="100">
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" id="phone" name="phone" 
+                               value="{{ profile.phone if profile.phone else '' }}" 
+                               placeholder="Enter phone number" maxlength="20">
+                        <small class="form-text text-muted">Format: digits, spaces, hyphens, parentheses</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <textarea class="form-control" id="address" name="address" 
+                                  placeholder="Enter address" rows="3" maxlength="200">{{ profile.address if profile.address else '' }}</textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">💾 Update Profile</button>
+                </form>
+                <hr>
+                <div class="text-center mt-3">
+                    <small class="text-muted">Note: All profile data is encrypted before storage.</small>
+                </div>
+    </div>
+</div>
+{% endblock %}
+

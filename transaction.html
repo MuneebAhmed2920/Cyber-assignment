@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Create Transaction - Secure FinTech App{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="section-box">
+            <h3 class="text-center mb-4" style="color: #64ffda;">💰 Create Transaction</h3>
+                <form method="POST" action="{{ url_for('transaction') }}">
+                    <div class="mb-3">
+                        <label for="type" class="form-label">Transaction Type</label>
+                        <select class="form-select" id="type" name="type" required>
+                            <option value="">Select type</option>
+                            <option value="deposit">Deposit</option>
+                            <option value="withdrawal">Withdrawal</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Amount</label>
+                        <input type="number" class="form-control" id="amount" name="amount" required 
+                               placeholder="Enter amount" step="0.01" min="0.01" max="1000000">
+                        <small class="form-text text-muted">Maximum amount: $1,000,000</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="description" class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description" required 
+                                  placeholder="Enter transaction description" rows="3" maxlength="500"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">✅ Create Transaction</button>
+                </form>
+    </div>
+</div>
+{% endblock %}
+

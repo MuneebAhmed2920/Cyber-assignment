@@ -1,0 +1,245 @@
+/* Dark gradient background */
+body {
+    background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+    min-height: 100vh;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    background: rgba(13, 27, 42, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #64ffda !important;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+.nav-link {
+    color: #e0e0e0 !important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #64ffda !important;
+    text-shadow: 0 0 5px rgba(100, 255, 218, 0.3);
+}
+
+/* Card/Section Box styling with glassmorphism */
+.card {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+    color: #e0e0e0;
+}
+
+.card-header {
+    background: rgba(100, 255, 218, 0.1) !important;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+    color: #64ffda;
+    font-weight: 600;
+}
+
+.card-title {
+    color: #64ffda;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+}
+
+/* Section box class */
+.section-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Button styling */
+.btn-primary {
+    background: linear-gradient(45deg, #00bcd4, #0097a7) !important;
+    border: none;
+    border-radius: 12px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, #00acc1, #00838f) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.5);
+}
+
+.btn-outline-primary {
+    border: 2px solid #00bcd4;
+    color: #00bcd4;
+    border-radius: 12px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background: #00bcd4;
+    color: #0d1b2a;
+    transform: translateY(-2px);
+}
+
+/* Form styling */
+.form-control, .form-select {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #e0e0e0 !important;
+    border-radius: 8px;
+    padding: 0.75rem;
+}
+
+.form-control:focus, .form-select:focus {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: #64ffda;
+    box-shadow: 0 0 0 0.2rem rgba(100, 255, 218, 0.25);
+    color: #e0e0e0 !important;
+}
+
+.form-control::placeholder {
+    color: rgba(224, 224, 224, 0.6);
+}
+
+.form-label {
+    color: #b0bec5;
+    font-weight: 500;
+}
+
+/* Table styling */
+.table {
+    color: #e0e0e0;
+}
+
+.table-dark {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.table thead th {
+    border-bottom: 2px solid rgba(100, 255, 218, 0.3);
+    color: #64ffda;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table tbody tr:hover {
+    background: rgba(100, 255, 218, 0.1);
+}
+
+/* Alert styling */
+.alert {
+    margin-top: 20px;
+    border-radius: 10px;
+    border: none;
+}
+
+.alert-success {
+    background: rgba(76, 175, 80, 0.2);
+    color: #81c784;
+    border-left: 4px solid #4caf50;
+}
+
+.alert-danger, .alert-error {
+    background: rgba(244, 67, 54, 0.2);
+    color: #ef5350;
+    border-left: 4px solid #f44336;
+}
+
+.alert-warning {
+    background: rgba(255, 152, 0, 0.2);
+    color: #ffb74d;
+    border-left: 4px solid #ff9800;
+}
+
+.alert-info {
+    background: rgba(33, 150, 243, 0.2);
+    color: #64b5f6;
+    border-left: 4px solid #2196f3;
+}
+
+/* Badge styling */
+.badge {
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.bg-success {
+    background: linear-gradient(45deg, #4caf50, #388e3c) !important;
+}
+
+.bg-danger {
+    background: linear-gradient(45deg, #f44336, #d32f2f) !important;
+}
+
+/* Main title styling */
+.main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #64ffda;
+    text-shadow: 2px 2px 15px rgba(100, 255, 218, 0.6);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.sub-title {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #b0bec5;
+    margin-bottom: 2rem;
+}
+
+/* Jumbotron styling */
+.jumbotron {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+/* HR styling */
+hr {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 2rem 0;
+}
+
+/* Container adjustments */
+.container {
+    padding-bottom: 3rem;
+}
+
+/* Card body text */
+.card-body {
+    color: #e0e0e0;
+}
+
+/* Small text styling */
+.text-muted {
+    color: rgba(224, 224, 224, 0.6) !important;
+}
+
+/* Code styling */
+code {
+    background: rgba(0, 0, 0, 0.3);
+    color: #64ffda;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
